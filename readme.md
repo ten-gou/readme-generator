@@ -1,13 +1,13 @@
 
 # a
-by a under Public Domain License
+Made by Libin, this program is considered to be under Public Domain License.
 
 ## Table of Contents
 [*1. Description*](#description)
 
-[*1-1. Picture Examples*](#picture-examples)
+    [*1-1. Picture Examples*](#picture-examples)
 
-[*1-2. License Information*](#license-information)
+    [*1-2. License Information*](#license-information)
 
 [*2. Installation Instructions*](#installation-instructions)
 
@@ -17,33 +17,35 @@ by a under Public Domain License
 
 [*5. Testing Instructions*](#testing-instructions)
 
-[*6. Contact Me*](#contact-me)
+[*6. Questions*](#questions)
 
 
-### Description
+## 1. Description
 a
 
-#### Picture Examples
+### 1-1. Picture Examples
 
-#### License Information
+### 1-2. License Information
 Anyone is free to use and modify this software without restrictions.
 
-### Installation Instructions
+## 2. Installation Instructions
 a
 
-### Usage Information
+## 3. Usage Information
 a
 
-### Contribution Guidelines
+## 4. Contribution Guidelines
 a
 
-### Testing Instructions
+## 5. Testing Instructions
 a
 
-### Questions
+## 6. Questions
 Have any questions? Contact me, using the points of contact provided below:
 
-**GITHUB LINK:** https://www.github.com/aa
+**GITHUB ACCOUNT:** ten-gou
 
-**EMAIL:** a
+**GITHUB LINK:** https://www.github.com/ten-gou
+
+**EMAIL:** lwang79@zoho.com
     
