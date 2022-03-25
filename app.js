@@ -1,21 +1,32 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const README = require('./src/readme-template.js');
+const generateREADME = require('./src/readme-template.js');
 
 const userPrompt = () => {
     console.log(`
     =================
 
-    Describe Yourself And Your Project
+    Describe Yourself
     
     =================
     `);
 
-    return inquirer.prompt([
+
+
+    return inquirer
+    .prompt([
         {
             type: 'input',
             name: 'name',
-            message: 'What is your name?'
+            message: 'What is your name? (Required)',
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your name!');
+                  return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -26,45 +37,73 @@ const userPrompt = () => {
             type: 'input',
             name: 'email',
             message: 'Enter your email address'
-        },
+        } 
+    ])
+}
+
+const readmePrompt = readmeData => {
+    console.log(`
+    =====================
+
+    Describe Your Project
+    
+    =====================
+    `);
+
+    // If there's no 'projects' array property, create one
+    if (!readmeData.projects) {
+        readmeData.projects = [];
+    }
+
+return inquirer
+    .prompt ([
         {   // name of the readme
             type: 'input',
-            name: 'readme-name',
+            name: 'readmeName',
             message: 'What is the name of your project?'
         }, 
         {   // description of the readme
             type: 'input',
-            name: 'readme-desc',
+            name: 'readmeDesc',
             message: 'What is the description for your project?'
         }, 
         {   // installation instructions
             type: 'input',
-            name: 'readme-install',
+            name: 'readmeInstall',
             message: 'How does someone install your project?'
         }, 
         {   // usage information
             type: 'input',
-            name: 'readme-usage',
+            name: 'readmeUsage',
             message: 'What does your project do?'
         }, 
         {   // contribution guidelines
             type: 'input',
-            name: 'readme-contribute',
+            name: 'readmeContribute',
             message: 'What are the contribution guidelines for your project?'
         }, 
         {   // test instructions
             type: 'input',
-            name: 'readme-test',
+            name: 'readmeTest',
             message: 'How do you test this project?'
-        }, 
+        },
     ])
+    .then(projectData => {
+        readmeData.projects.push(projectData);
+        return readmeData;
+    })
 }
 
 userPrompt()
-    .then(answers => console.log(answers))
+    .then(readmePrompt)
+    .then(readmeData => {        
+        const pageMD = generateREADME(readmeData);
 
-// fs.writeFile('./README.md', generateREADME, err => {
-//    if (err) throw new Error(err);
-//
-//    console.log('Portfolio complete! Check out index.html to see the output!');
-//  });
+        fs.writeFile('./readme.md', pageMD, err => {
+           if (err) throw new Error(err);
+           console.log('Readme created! Check out readme.MD in this directory to see it!');
+        });
+    });
+
+
+    
