@@ -66,8 +66,8 @@ return inquirer
             type: 'list',
             name: 'readmeLicense',
             message: 'What license is this software governed under?',
-            choices: ['Public Domain License', 'LGPL', 'Permissive', 'Copyleft', 'Proprietary']            
-        }, 
+            choices: ['Public Domain License', 'Lesser General Public License', 'Permissive', 'Copyleft', 'Proprietary'],
+        },
         {   // description of the readme
             type: 'input',
             name: 'readmeDesc',
@@ -95,6 +95,43 @@ return inquirer
         },
     ])
     .then(projectData => {
+            // If there's no 'projects' array property, create one
+        if (!readmeData.license) {
+            readmeData.license = [];
+        }
+
+        if (projectData.readmeLicense = 'Public Domain License') {
+            licenseInformation = {
+                licenseInfo: 'Anyone is free to use and modify this software without restrictions.',
+            }
+            readmeData.license.push(licenseInformation);
+        }
+        else if (projectData.readmeLicense = 'Lesser General Public License') {
+            licenseInformation = {
+                licenseInfo: 'Under an LGPL license, developers have rights to link to open source libraries within their own software. Resulting code can be licensed under any other type of license – even proprietary – when projects are compiled or linked to include an LGPL-licensed library. The caveat is that if any part of the library is copied into the code or modified, the terms of the original LGPL license will apply to the developed code that is used in the library.',
+            }
+            readmeData.license.push(licenseInformation);
+        }
+        else if (projectData.readmeLicense = 'Permissive') {
+            licenseInformation = {
+                licenseInfo: 'Few restrictions or requirements for the distribution or modification of the woftware may apply.',
+            }
+            readmeData.license.push(licenseInformation);
+        }
+        else if (projectData.readmeLicense = 'Copyleft') {
+            licenseInformation = {
+                licenseInfo: 'Restrictive- known otherwise as a reciprocal license. The licensed code may be modified or distributed as part of a software project if the new code is distributed under the same software license.',
+            }
+            readmeData.license.push(licenseInformation);
+        }
+        else if (projectData.readmeLicense = 'Proprietary') {
+            licenseInformation = {
+                licenseInfo: 'The software ineligible for copying, modifying, or distribution.',
+            }
+            readmeData.license.push(licenseInformation);
+        }
+
+
         readmeData.projects.push(projectData);
         return readmeData;
     })
