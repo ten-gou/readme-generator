@@ -9,30 +9,30 @@ module.exports = (readmeData) => {
         }]
     } = readmeData
     return `
-    # ${readmeName}
-    by ${name}
+# ${readmeName}
+by ${name}
 
-    ## Table of Contents
-    TOC element
+## Table of Contents
+TOC element
 
-    ### Description
-    ${readmeDesc}
+### Description
+${readmeDesc}
 
-    ### Installation Instructions
-    ${readmeInstall}
+### Installation Instructions
+${readmeInstall}
 
-    ### Usage Instructions
-    ${readmeUsage}
+### Usage Instructions
+${readmeUsage}
 
-    ### Contibution Guidelines
-    ${readmeContribute}
+### Contibution Guidelines
+${readmeContribute}
 
-    ### Testing Instructions
-    ${readmeTest}
+### Testing Instructions
+${readmeTest}
 
-    #### Contact Me
-    ${github}
-    ${email}
+#### Contact Me
+${github}
+${email}
 
     `;
 };
