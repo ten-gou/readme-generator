@@ -61,6 +61,12 @@ return inquirer
             type: 'input',
             name: 'readmeName',
             message: 'What is the name of your project?'
+        },
+        {   // type of software license
+            type: 'list',
+            name: 'readmeLicense',
+            message: 'What license is this software governed under?',
+            choices: ['Public Domain License', 'LGPL', 'Permissive', 'Copyleft', 'Proprietary']            
         }, 
         {   // description of the readme
             type: 'input',
