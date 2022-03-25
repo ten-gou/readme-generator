@@ -3,21 +3,21 @@
 Made by Libin, this program is considered to be under Public Domain License.
 
 ## Table of Contents
-[*1. Description*](#description)
+[*1. Description*](#1-description)
 
-[*1-1. Picture Examples*](#picture-examples)
+[*1-1. Picture Examples*](#1-1-picture-examples)
 
-[*1-2. License Information*](#license-information)
+[*1-2. License Information*](#1-2-license-information)
 
-[*2. Installation Instructions*](#installation-instructions)
+[*2. Installation Instructions*](#2-installation-instructions)
 
-[*3. Usage Information*](#usage-information)
+[*3. Usage Information*](#3-usage-information)
 
-[*4. Contibution Guidelines*](#contribution-guidelines)
+[*4. Contribution Guidelines*](#4-contribution-guidelines)
 
-[*5. Testing Instructions*](#testing-instructions)
+[*5. Testing Instructions*](#5-testing-instructions)
 
-[*6. Questions*](#questions)
+[*6. Questions*](#6-questions)
 
 
 ## 1. Description
