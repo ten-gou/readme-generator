@@ -18,9 +18,9 @@ Made by ${name}, this program is considered to be under ${readmeLicense}.
 ## Table of Contents
 [*1. Description*](#description)
 
-    [*1-1. Picture Examples*](#picture-examples)
+[*1-1. Picture Examples*](#picture-examples)
 
-    [*1-2. License Information*](#license-information)
+[*1-2. License Information*](#license-information)
 
 [*2. Installation Instructions*](#installation-instructions)
 
