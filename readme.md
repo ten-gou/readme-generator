@@ -1,6 +1,6 @@
 
-# a
-Made by Libin, this program is considered to be under Public Domain License.
+# README Generator
+Made by Libin Wang, this program is considered to be under Public Domain License.
 
 ## Table of Contents
 [*1. Description*](#1-description)
@@ -21,7 +21,7 @@ Made by Libin, this program is considered to be under Public Domain License.
 
 
 ## 1. Description
-a
+A command-line application, which allows you to quickly create README files with the template
 
 ### 1-1. Picture Examples
 
@@ -29,16 +29,16 @@ a
 Anyone is free to use and modify this software without restrictions.
 
 ## 2. Installation Instructions
-a
+Download and run through the command line. Needs to have NodeJS installed for it to work
 
 ## 3. Usage Information
-a
+Provides a series of prompts, after which a README is generated complete with formatting, TOC, etc
 
 ## 4. Contribution Guidelines
-a
+N/A
 
 ## 5. Testing Instructions
-a
+Run Debugger
 
 ## 6. Questions
 Have any questions? Contact me, using the points of contact provided below:
