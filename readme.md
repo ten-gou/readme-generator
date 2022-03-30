@@ -32,13 +32,13 @@ Anyone is free to use and modify this software without restrictions.
 Download and run through the command line. Needs to have NodeJS installed for it to work
 
 ## 3. Usage Information
-Provides a series of prompts, after which a README is generated complete with formatting, TOC, etc
+Provides a series of prompts, after which a README is generated complete with formatting, TOC, etc. Demonstration of application can be found here: https://drive.google.com/file/d/1g2cYhQwkGMegCf1WPhccjoajjWvvLokM/view?usp=sharing
 
 ## 4. Contribution Guidelines
 N/A
 
 ## 5. Testing Instructions
-Run Debugger
+Run the program
 
 ## 6. Questions
 Have any questions? Contact me, using the points of contact provided below:
