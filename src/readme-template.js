@@ -8,7 +8,7 @@ module.exports = (readmeData) => {
             licenseInfo,
         }],
         projects:[{
-            readmeName, readmeLicense, readmeDesc, readmeInstall, readmeUsage, readmeContribute, readmeTest
+            readmeName, readmeLicense, readmeDesc, readmeInstall, readmeUsage, readmeContribute, readmeTest, readmeBug
         }]
     } = readmeData
     return `
@@ -20,7 +20,9 @@ Made by ${name}, this program is considered to be under ${readmeLicense}.
 
 [*1-1. Picture Examples*](#1-1-picture-examples)
 
-[*1-2. License Information*](#1-2-license-information)
+[*1-2. Known Bugs*](#1-2-known-bugs)
+
+[*1-3. License Information*](#1-3-license-information)
 
 [*2. Installation Instructions*](#2-installation-instructions)
 
@@ -38,7 +40,10 @@ ${readmeDesc}
 
 ### 1-1. Picture Examples
 
-### 1-2. License Information
+### 1-2. Known Bugs
+${readmeBug}
+
+### 1-3. License Information
 ${licenseInfo}
 
 ## 2. Installation Instructions

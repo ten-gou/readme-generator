@@ -93,6 +93,11 @@ return inquirer
             name: 'readmeTest',
             message: 'How do you test this project?'
         },
+        {   // Notice of Bugs
+            type: 'input',
+            name: 'readmeBug',
+            message: 'Are there any bugs that a user needs to be aware of?'
+        }
     ])
     .then(projectData => {
             // If there's no 'projects' array property, create one
