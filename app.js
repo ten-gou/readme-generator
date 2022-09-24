@@ -68,6 +68,12 @@ return inquirer
             message: 'What license is this software governed under?',
             choices: ['Public Domain License', 'Lesser General Public License', 'Permissive', 'Copyleft', 'Proprietary'],
         },
+        {   // type of programs used
+            type: 'checkbox',
+            name: 'programsUsed',
+            message: 'Which of the following programs have you used?',
+            choices: ['HTML5', 'CSS3', 'Javascript', 'Python', 'SQL', 'ExpressJS', 'React', 'Node.js', 'MongoDB', 'GraphQL', 'MUI', 'Apollo GraphQL', 'Handlebars.js', 'AngularJS', 'Heroku', 'TailwindCSS', 'BootStrap'],
+        },
         {   // description of the readme
             type: 'input',
             name: 'readmeDesc',
@@ -100,9 +106,13 @@ return inquirer
         }
     ])
     .then(projectData => {
-            // If there's no 'projects' array property, create one
+        // If there's no 'projects' array property, create one
         if (!readmeData.license) {
             readmeData.license = [];
+        }
+
+        if (!readmeData.program) {
+            readmeData.program = [];
         }
 
         if (projectData.readmeLicense = 'Public Domain License') {
@@ -129,14 +139,133 @@ return inquirer
             }
             readmeData.license.push(licenseInformation);
         }
-        else if (projectData.readmeLicense = 'Proprietary') {
+        else {
             licenseInformation = {
                 licenseInfo: 'The software ineligible for copying, modifying, or distribution.',
             }
             readmeData.license.push(licenseInformation);
         }
 
-
+        if (projectData.programsUsed.indexOf('HTML5') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white',
+                alt: 'HTML5 Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('CSS3') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white',
+                alt: 'CSS3 Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('Javascript') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/JavaScript-000000?style=flat&logo=javascript&logoColor=323330',
+                alt: 'Javascript Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('Python') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=000000',
+                alt: 'Python Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('SQL') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/SQL-AEB0B5?style=flat',
+                alt: 'SQL Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('ExpressJS') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/Express.js-white?style=flat&logo=express&logoColor=black',
+                alt: 'ExpressJS Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('React') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB',
+                alt: 'React Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('Node.js') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white',
+                alt: 'Node.JS Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('MongoDB') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white',
+                alt: 'MongoDB Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('GraphQL') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/GraphQL-171e26?style=flat&logo=GraphQL&logoColor=e10098',
+                alt: 'GraphQL Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('MUI') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/MUI-0A1929?style=flat&logo=MUI&logoColor=007FFF',
+                alt: 'MUI Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('Apollo GraphQL') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/Apollo%20GraphQL-white?style=flat&logo=ApolloGraphQL&logoColor=311C87',
+                alt: 'Apollo GraphQL Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('Handlebars.js') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/HandlebarsJS-orange?style=flat',
+                alt: 'Handlebars.JS Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('AngularJS') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/AngularJS-red?style=flat',
+                alt: 'AngularJS Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('Heroku') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/Heroku-blueviolet?style=flat',
+                alt: 'Heroku Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('TailwindCSS') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/TailwindCSS-9cf?style=flat',
+                alt: 'TailwindCSS Badge',
+            };
+            readmeData.program.push(program);
+        }
+        if (projectData.programsUsed.indexOf('BootStrap') !== -1) {
+            program = {
+                url: 'https://img.shields.io/badge/Bootstrap-blueviolet?style=flat',
+                alt: 'BootStrap Badge',
+            };
+            readmeData.program.push(program);
+        }
+        
         readmeData.projects.push(projectData);
         return readmeData;
     })

@@ -7,18 +7,35 @@ module.exports = (readmeData) => {
         license:[{
             licenseInfo,
         }],
+        program: [{
+            url, alt
+        }],
         projects:[{
-            readmeName, readmeLicense, readmeDesc, readmeInstall, readmeUsage, readmeContribute, readmeTest, readmeBug
+            readmeName, readmeLicense, programsUsed, readmeDesc, readmeInstall, readmeUsage, readmeContribute, readmeTest, readmeBug
         }]
-    } = readmeData
+    } = readmeData;
+
+    var str = '';
+
+    for (i=0; i<readmeData.program.length; i++) {
+        const button = `<img src="${readmeData.program[i].url}" alt="${readmeData.program[i].alt}"/>
+        `;
+
+        str += button;
+    }
+
     return `
 # ${readmeName}
 Made by ${name}, this program is considered to be under ${readmeLicense}.
 
+<div>
+${str}
+</div>
+
 ## Table of Contents
 [*1. Description*](#1-description)
 
-[*1-1. Picture Examples*](#1-1-picture-examples)
+[*1-1. Picture or Video Examples*](#1-1-picture-or-video-examples)
 
 [*1-2. Known Bugs*](#1-2-known-bugs)
 
@@ -38,7 +55,7 @@ Made by ${name}, this program is considered to be under ${readmeLicense}.
 ## 1. Description
 ${readmeDesc}
 
-### 1-1. Picture Examples
+### 1-1. Picture or Video Examples
 
 ### 1-2. Known Bugs
 ${readmeBug}
