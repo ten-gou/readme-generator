@@ -276,7 +276,7 @@ userPrompt()
     .then(readmeData => {        
         const pageMD = generateREADME(readmeData);
 
-        fs.writeFile('./readme.md', pageMD, err => {
+        fs.writeFile('./copy of readme.md', pageMD, err => {
            if (err) throw new Error(err);
            console.log('Readme created! Check out readme.MD in this directory to see it!');
         });
