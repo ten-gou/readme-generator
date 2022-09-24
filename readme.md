@@ -1,11 +1,9 @@
 
-# a
-Made by a, this program is considered to be under Public Domain License.
+# README Generator
+Made by Libin Wang, this program is considered to be under Public Domain License.
 
 <div>
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5 Badge"/>
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3 Badge"/>
-        <img src="https://img.shields.io/badge/JavaScript-000000?style=flat&logo=javascript&logoColor=323330" alt="Javascript Badge"/>
+<img src="https://img.shields.io/badge/JavaScript-000000?style=flat&logo=javascript&logoColor=323330" alt="Javascript Badge"/>
         
 </div>
 
@@ -30,34 +28,34 @@ Made by a, this program is considered to be under Public Domain License.
 
 
 ## 1. Description
-a
+Clean, sleek README generator using terminal inputs
 
 ### 1-1. Picture or Video Examples
 
 ### 1-2. Known Bugs
-a
+N/A
 
 ### 1-3. License Information
 Anyone is free to use and modify this software without restrictions.
 
 ## 2. Installation Instructions
-a
+Download and use npm start within the terminal
 
 ## 3. Usage Information
-a
+Provides a series of prompts for the user to answer, and generates a README based on the answers provided
 
 ## 4. Contribution Guidelines
-a
+N/A
 
 ## 5. Testing Instructions
-
+N/A
 
 ## 6. Questions
 Have any questions? Contact me, using the points of contact provided below:
 
-**GITHUB ACCOUNT:** a
+**GITHUB ACCOUNT:** ten-gou
 
-**GITHUB LINK:** https://www.github.com/a
+**GITHUB LINK:** https://www.github.com/ten-gou
 
-**EMAIL:** a
+**EMAIL:** lwang79@zoho.com
     
